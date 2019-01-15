@@ -1,4 +1,4 @@
-package com.bergman.traveldemo.flight;
+package com.bergman.traveldemo;
 
 import com.bergman.traveldemo.flight.book.Flight;
 import com.bergman.traveldemo.flight.book.FlightRepository;

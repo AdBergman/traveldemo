@@ -30,7 +30,7 @@ public class FlightService {
 
     public Flight replaceFlight(Long id, Flight newFlight) {
         return flightRepository.findById(id)
-                .map(flight -> {
+                .map(flight -> {    //framework to solve this
                     flight.setOrigin(newFlight.getOrigin());
                     flight.setDestination(newFlight.getDestination());
                     flight.setAirline(newFlight.getAirline());
