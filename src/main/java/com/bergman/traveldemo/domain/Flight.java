@@ -1,6 +1,6 @@
-package com.bergman.traveldemo.flight.book;
+package com.bergman.traveldemo.domain;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +8,11 @@ import javax.persistence.Id;
 
 //TODO: Lombok builder
 @Data
+@Builder
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class Flight {
 
     private @Id @GeneratedValue Long id;
@@ -16,14 +20,10 @@ public class Flight {
     private String destination;
     private String airline;
     private String number;
+    private String departureTime;
+    private String arrivalTime;
+    private double priceTotal;
+    private double taxesTotal;
+    private String fareBasis;
 
-    public Flight() {
-    }
-
-    public Flight(String origin, String destination, String airline, String number) {
-        this.origin = origin;
-        this.destination = destination;
-        this.airline = airline;
-        this.number = number;
-    }
 }

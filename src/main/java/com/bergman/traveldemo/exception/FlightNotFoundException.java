@@ -1,8 +1,8 @@
-package com.bergman.traveldemo.flight.book;
+package com.bergman.traveldemo.exception;
 
 public class FlightNotFoundException extends RuntimeException {
 
-    FlightNotFoundException(Long id) {
+    public FlightNotFoundException(Long id) {
         super("" + id);
     }
 }

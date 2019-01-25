@@ -1,5 +1,8 @@
-package com.bergman.traveldemo.flight.book;
+package com.bergman.traveldemo.service;
 
+import com.bergman.traveldemo.domain.Flight;
+import com.bergman.traveldemo.exception.FlightNotFoundException;
+import com.bergman.traveldemo.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.bergman.traveldemo.flight.availability;
+package com.bergman.traveldemo.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

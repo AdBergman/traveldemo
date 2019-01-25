@@ -1,5 +1,8 @@
-package com.bergman.traveldemo.flight.book;
+package com.bergman.traveldemo.rest;
 
+import com.bergman.traveldemo.domain.Flight;
+import com.bergman.traveldemo.exception.FlightNotFoundException;
+import com.bergman.traveldemo.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
