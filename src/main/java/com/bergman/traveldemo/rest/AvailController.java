@@ -20,17 +20,6 @@ public class AvailController {
     @Autowired
     private AvailService availService;
 
-    @GetMapping("/search")
-    FlightOffer[] flightOffer(@RequestBody Params searchRequest){
-        try {
-            return availService.requestAvailability(searchRequest);
-
-        } catch (ResponseException e) {
-            throw new ResponseStatusException(
-                    HttpStatus.NOT_FOUND, "Flight Not Found.", e);
-        }
-    }
-
     @GetMapping("/flightsearch")
     List<Flight> results (@RequestBody Params searchRequest){
         try {

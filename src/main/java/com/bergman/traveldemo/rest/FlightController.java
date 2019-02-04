@@ -22,12 +22,13 @@ public class FlightController {
     }
 
     @PostMapping("/flights")
-    Flight newFlight(@RequestBody Flight newFlight) {
+    @ResponseStatus(HttpStatus.CREATED)
+    Flight addFlight(@RequestBody Flight newFlight) {
         return flightService.saveFlight(newFlight);
     }
 
     @GetMapping("/flights/{id}")
-    Flight one(@PathVariable Long id) {
+    Flight getFlight(@PathVariable Long id) {
         try {
             return flightService.getFlight(id);
         } catch (FlightNotFoundException e) {

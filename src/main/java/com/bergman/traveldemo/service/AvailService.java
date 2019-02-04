@@ -21,16 +21,6 @@ public class AvailService {
     @Value("${AMADEUS_CLIENT_SECRET}")
     private String AMADEUS_CLIENT_SECRET;
 
-    public FlightOffer[] requestAvailability(Params searchRequest) throws ResponseException {
-        Amadeus amadeus = Amadeus
-                .builder(AMADEUS_CLIENT_ID, AMADEUS_CLIENT_SECRET)
-                .build();
-
-        System.out.println("********* RETURNING AvailService *******");
-        return amadeus.shopping.flightOffers.get(searchRequest);
-
-    }
-
     public List<Flight> flightSearch(Params searchRequest) throws ResponseException {
         List<Flight> results = new ArrayList<>();
         Amadeus amadeus = Amadeus
@@ -55,9 +45,6 @@ public class AvailService {
                          .fareBasis(flightOffer.getOfferItems()[0].getServices()[0].getSegments()[0].getPricingDetailPerAdult().getFareBasis())
                          .build());
              }
-
-            FlightOffer.OfferItem[] offerItem = flightOffers[0].getOfferItems();
-             System.out.println(offerItem[0].getServices()[0].getSegments());
 
         return results;
     }
