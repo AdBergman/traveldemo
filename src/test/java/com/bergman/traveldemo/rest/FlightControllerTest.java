@@ -2,7 +2,6 @@ package com.bergman.traveldemo.rest;
 
 import com.bergman.traveldemo.domain.Flight;
 import com.bergman.traveldemo.service.FlightService;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +12,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -31,9 +29,8 @@ public class FlightControllerTest {
     private FlightService flightService;
 
     @Test
-    public void getAllFlights() throws Exception
-    {
-        mockMvc.perform( MockMvcRequestBuilders
+    public void getAllFlights() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders
                 .get("/flights")
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
@@ -41,9 +38,8 @@ public class FlightControllerTest {
     }
 
     @Test
-    public void getFlight() throws Exception
-    {
-        mockMvc.perform( MockMvcRequestBuilders
+    public void getFlight() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders
                 .get("/flights/{id}", 1)
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
@@ -51,17 +47,38 @@ public class FlightControllerTest {
     }
 
     @Test
-    public void addFlight() throws Exception
-    {
+    public void addFlight() throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
-        mockMvc.perform( MockMvcRequestBuilders
+        mockMvc.perform(MockMvcRequestBuilders
                 .post("/flights")
                 .content(objectMapper.writeValueAsString(new Flight().builder()
                         .origin("STO").destination("GOT").airline("SK").number("1234")
                         .build()))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isCreated());
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void replaceFlight() throws Exception {
+        ObjectMapper objectMapper = new ObjectMapper();
+        mockMvc.perform(MockMvcRequestBuilders
+                .put("/flights/{id}", 1)
+                .content(objectMapper.writeValueAsString(new Flight().builder()
+                        .origin("STO").destination("GOT").airline("SK").number("1234")
+                        .build()))
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void deleteFlight() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders
+                .delete("/flights/{id}", 1)
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
     }
 
 }

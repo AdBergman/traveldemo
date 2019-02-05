@@ -2,7 +2,6 @@ package com.bergman.traveldemo.rest;
 
 import com.amadeus.Params;
 import com.amadeus.exceptions.ResponseException;
-import com.amadeus.resources.FlightOffer;
 import com.bergman.traveldemo.domain.Flight;
 import com.bergman.traveldemo.service.AvailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +20,9 @@ public class AvailController {
     private AvailService availService;
 
     @GetMapping("/flightsearch")
-    List<Flight> results (@RequestBody Params searchRequest){
+    List<Flight> flightSearch (@RequestBody Params searchRequest){
         try {
             return availService.flightSearch(searchRequest);
-
         } catch (ResponseException e) {
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND, "Flight Not Found.", e);

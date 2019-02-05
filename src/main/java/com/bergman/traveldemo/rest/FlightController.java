@@ -21,12 +21,6 @@ public class FlightController {
         return flightService.getAllFlights();
     }
 
-    @PostMapping("/flights")
-    @ResponseStatus(HttpStatus.CREATED)
-    Flight addFlight(@RequestBody Flight newFlight) {
-        return flightService.saveFlight(newFlight);
-    }
-
     @GetMapping("/flights/{id}")
     Flight getFlight(@PathVariable Long id) {
         try {
@@ -36,6 +30,13 @@ public class FlightController {
                     HttpStatus.NOT_FOUND, "Flight Not Found.", e);
         }
     }
+
+    @PostMapping("/flights")
+    Flight addFlight(@RequestBody Flight newFlight) {
+        return flightService.saveFlight(newFlight);
+    }
+
+
 
     @PutMapping("/flights/{id}")
     Flight replaceFlight(@RequestBody Flight newFlight, @PathVariable Long id) {
