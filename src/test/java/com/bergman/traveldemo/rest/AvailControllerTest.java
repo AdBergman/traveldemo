@@ -37,7 +37,7 @@ public class AvailControllerTest {
     @Test
     public void flightSearch() throws Exception {
         List<Flight> mockList = new ArrayList<>();
-        mockList.add(new Flight());
+        mockList.add(new Flight().builder().origin("STO").destination("GOT").build());
         Params params = Params.with("origin", "STO");
 
         when(availService.flightSearch(params)).thenReturn(mockList);

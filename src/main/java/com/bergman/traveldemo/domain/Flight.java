@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-//TODO: Lombok builder
 @Data
 @Builder
 @Entity
@@ -17,7 +16,6 @@ import javax.persistence.Id;
 @NoArgsConstructor
 
 public class Flight {
-
     private @Id @GeneratedValue Long id;
     private String origin;
     private String destination;
@@ -28,5 +26,4 @@ public class Flight {
     private double priceTotal;
     private double taxesTotal;
     private String fareBasis;
-
 }
