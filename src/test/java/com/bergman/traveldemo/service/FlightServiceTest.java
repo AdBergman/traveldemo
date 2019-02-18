@@ -53,17 +53,18 @@ public class FlightServiceTest {
 
     @Test
     public void shouldGetFlight(){
-
+        when(flightRepository.findById(flight.getId())).thenReturn(java.util.Optional.ofNullable(flight));
+        assertThat(flightService.getFlight(flight.getId())).isEqualTo(flight);
     }
 
     @Test
     public void shouldDeleteFlight(){
-
+        //TODO:
     }
 
     @Test
     public void shouldReplaceFlight(){
-
+        //TODO:
     }
 
 }
