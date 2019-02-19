@@ -5,7 +5,7 @@ In order to perform a low fare searh you need a key for the [Amadeus SDK](https:
 
 
 
-A Demo version is currently hosted on AWS (with no database as of yet)
+###A Demo version is currently hosted on AWS (with no database as of yet)
 
 Travel Demo uses [Swagger2 documentation](http://traveldemo2-env.gus2umu43z.eu-north-1.elasticbeanstalk.com/swagger-ui.html) of the end-points and model.
 
