@@ -1,8 +1,10 @@
 # traveldemo
 This is a demo Spring Boot Rest API that can search for flights and store them.
 
-In order to run this application you need to set up the application.properties file as per example.
+In order to run this application you need to set up the application.properties file as per appPropSample.
 A key from https://developers.amadeus.com/ is also required if you wish to use the low fare search.
+
+
 
 A Demo version is currently hosted on AWS (with no database as of yet)
 
