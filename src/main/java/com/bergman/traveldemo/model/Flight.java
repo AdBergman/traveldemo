@@ -1,4 +1,4 @@
-package com.bergman.traveldemo.domain;
+package com.bergman.traveldemo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

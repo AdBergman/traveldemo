@@ -1,6 +1,6 @@
 package com.bergman.traveldemo;
 
-import com.bergman.traveldemo.domain.Flight;
+import com.bergman.traveldemo.model.Flight;
 import com.bergman.traveldemo.repository.FlightRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;

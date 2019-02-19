@@ -1,6 +1,6 @@
 package com.bergman.traveldemo.rest;
 
-import com.bergman.traveldemo.domain.Flight;
+import com.bergman.traveldemo.model.Flight;
 import com.bergman.traveldemo.service.FlightService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;

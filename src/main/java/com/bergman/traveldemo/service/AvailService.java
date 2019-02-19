@@ -4,7 +4,7 @@ import com.amadeus.Amadeus;
 import com.amadeus.Params;
 import com.amadeus.exceptions.ResponseException;
 import com.amadeus.resources.FlightOffer;
-import com.bergman.traveldemo.domain.Flight;
+import com.bergman.traveldemo.model.Flight;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

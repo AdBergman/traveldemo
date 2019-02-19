@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.bergman.traveldemo.domain.Flight;
+import com.bergman.traveldemo.model.Flight;
 import com.bergman.traveldemo.repository.FlightRepository;
 
 import java.util.ArrayList;

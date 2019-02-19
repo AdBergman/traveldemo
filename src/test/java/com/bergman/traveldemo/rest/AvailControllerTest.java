@@ -1,7 +1,7 @@
 package com.bergman.traveldemo.rest;
 
 import com.amadeus.Params;
-import com.bergman.traveldemo.domain.Flight;
+import com.bergman.traveldemo.model.Flight;
 import com.bergman.traveldemo.service.AvailService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

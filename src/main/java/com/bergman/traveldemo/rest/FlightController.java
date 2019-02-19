@@ -1,6 +1,6 @@
 package com.bergman.traveldemo.rest;
 
-import com.bergman.traveldemo.domain.Flight;
+import com.bergman.traveldemo.model.Flight;
 import com.bergman.traveldemo.exception.FlightNotFoundException;
 import com.bergman.traveldemo.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
