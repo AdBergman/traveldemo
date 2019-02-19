@@ -1,17 +1,16 @@
-# traveldemo
-This is a demo Spring Boot Rest API that can search for flights and store them.
+## This is a demo Spring Boot Rest API that can search for flights and store them.
 
 In order to run this application you need to set up the application.properties file as per appPropSample.
-A key from https://developers.amadeus.com/ is also required if you wish to use the low fare search.
+In order to perform a low fare searh you need a key for the [Amadeus SDK](https://developers.amadeus.com/).
 
 
 
 A Demo version is currently hosted on AWS (with no database as of yet)
 
-The API documentation at: 
-http://traveldemo2-env.gus2umu43z.eu-north-1.elasticbeanstalk.com/swagger-ui.html
+Travel Demo uses [Swagger2 documentation](http://traveldemo2-env.gus2umu43z.eu-north-1.elasticbeanstalk.com/swagger-ui.html) of the end-points and model.
 
-As no database is implemented yet for the AWS version only the flightsearch is active:
+
+As no database is implemented yet for the AWS version only the flightsearch is available:
 
 url: Traveldemo2-env.gus2umu43z.eu-north-1.elasticbeanstalk.com/flightsearch
 
