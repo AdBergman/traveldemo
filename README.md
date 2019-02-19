@@ -14,20 +14,19 @@ As no database is implemented yet for the AWS version only the flightsearch is a
 url: Traveldemo2-env.gus2umu43z.eu-north-1.elasticbeanstalk.com/flightsearch
 
 Sample get request:
+```
 {
 	"origin" : "STO",
-	
 	"destination" :  "LON",
-	
 	"departureDate" : "2019-08-01",
-	
 	"nonStop" : "true",
-	
 	"max" : 1
 }
+```
 
 Sample response:
- {
+```
+ { 
         "id": null,
         "origin": "ARN",
         "destination": "LHR",
@@ -39,3 +38,4 @@ Sample response:
         "taxesTotal": 33.05,
         "fareBasis": "OSOLIGHT"
     }
+```
